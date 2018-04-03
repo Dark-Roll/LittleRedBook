@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>小紅書</title>
     <!-- <link rel="stylesheet" href="./css/head.css"> -->
+    <link rel="stylesheet" href="title.css">
 </head>
 
 <body>
@@ -15,20 +16,48 @@
         <div class="innerHead">
             <img src="redBookLogo.png" alt="" class="headimg">
             <div class="menu-nav">
-                <a>Home</a>
+                <a class="linkPage">Home</a>
                 <a>Find</a>
                 <a>媒體報導</a>
-                <!-- <li>????</li>
-                <li>??</li> -->
+                <a>加入</a>
+                
+                <!-- <li>??</li> -->
             </div>
         </div>
     </div>
+    <div class="title-item">
+        <div class="left">
+            <span>小紅書是</span><br> 
+            <!-- Why not use br typing will go first -->
+            <div id='divTyping' 
+                style="float:left; 
+                    padding: 20px 0;
+                    font-size:25px;
+                    width:100%;
+                    height:73px;
+                        
+                ">
+                <!--height is default for element null  -->
+            </div>
+            <!-- why css can't run  -->
+            <img src="slogan.jpg" class="slogan" alt="">
+
+            <div class="btn-item">
+                <a href="//itunes.apple.com/cn/app/小红书-标记我的生活/id741292507?mt=8">
+                    ios版
+                </a>
+                <a href="//www.wandoujia.com/apps/com.xingin.xhs">
+                    Android版
+                </a>
+            </div>
+        </div>
+        <img class="headIMG" src="LandingPage.png" alt="">
+    </div>
 
     
-    <div id='divTyping' style="top: 200px; position: absolute;">aa</div>
-    <!-- why css can't run  -->
+
     <script>
-        let strArr=['js 實現的 打字效果，感覺蠻有趣的。','裝逼逼逼逼逼1','萌萌da','4'];
+        let strArr=['js 實現的 打字效果，感覺蠻有趣的','裝逼逼逼逼逼1','萌萌da','4'];
         let strLoopCount=0; 
         var i = 0;
         var divTyping = document.getElementById('divTyping');
@@ -38,13 +67,13 @@
             const typing=()=>{
                 console.log(strLoopCount);
                 if (i <= strArr[strLoopCount].length) {   // 利用小於和回乎做 for loop
-                    divTyping.innerHTML = strArr[strLoopCount].slice(0, i++) + '|';
+                    divTyping.innerText = strArr[strLoopCount].slice(0, i++) + '|';
                     setTimeout('typing()',50);//遞歸調用  好像沒作用
                 }
                 
                 else {
                     console.log("end");
-                    divTyping.innerHTML = strArr[strLoopCount];//結束打字,移除 _ 光標
+                    divTyping.innerText = strArr[strLoopCount];//結束打字,移除 _ 光標
                     i=0;
                     strLoopCount=(strLoopCount+1)%strArr.length;
                     // typing()

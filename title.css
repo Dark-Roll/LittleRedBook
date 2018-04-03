@@ -1,0 +1,99 @@
+
+/* RWD not yet */
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: Helvetica Neue,Arial,PingFang SC,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+}
+
+body{
+}
+
+.headtop{
+     position: fixed;
+     top: 0;
+     width: 100%;
+/* 100% for 排版 */
+}
+
+.innerHead{
+     margin: 0 auto;
+     width: 940px;
+
+}
+
+.headimg{
+     float: left;
+     width: 8%;
+     margin:12px 60px 13px 0;
+}
+
+
+.menu-nav a{
+     width: 100px;
+     text-align: center;
+     font-size: 16px;
+     display: inline-block;
+     line-height: 50px;
+     cursor: pointer;
+     margin: 0 35px;     
+     /* height: 50px; */
+}
+
+.linkPage{
+     color: #f15467;
+     border-bottom:1px solid #f15467;
+}
+
+.left{
+     float: left;
+}
+
+.title-item{
+     width:940px;
+     margin: 0 auto;
+     padding-top:140px;
+     overflow: hidden;
+     /* for big append float element */
+}
+
+.title-item span{
+     font-size: 48px;
+     font-weight: bold;
+     line-height: 55px;
+}
+
+.divTyping{
+     top: 200px; 
+     position: absolute;
+}
+
+.slogan{
+     width: 248px;
+     height: 16px;
+     display: block;
+}
+.btn-item{
+     margin: 57px 0 205px;
+}
+
+.btn-item a{
+     width: 150px;
+     height: 40px;
+     display: block;
+     /* remember add block attribute */
+     border-radius: 5px;
+     background: black;
+     color: white;
+     text-align: center;
+     float: left;
+     margin-right: 10px;
+     line-height: 40px;
+}
+
+
+.headIMG{
+     float: right;
+     width: 500px;
+}
