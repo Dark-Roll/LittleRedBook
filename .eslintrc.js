@@ -21,7 +21,7 @@ module.exports = {
             "tab"
         ],
         "linebreak-style": [
-            "error",
+            "off",
             "windows"
         ],
         "quotes": [
@@ -29,8 +29,7 @@ module.exports = {
             "double"
         ],
         "semi": [
-            "error",
-            "never"
+            "warn"
         ]
     }
 };
