@@ -1,0 +1,14 @@
+.gridContainer{
+    height: 100%;
+    display: grid;
+    grid-template-columns: [line1] 100px [line2] 300px [line3] auto [line-end];
+    grid-template-rows: [row1] 150px [row2] 0.15fr [row3] 0.15fr [row4] auto;
+}
+
+.navbar{
+    display: grid;
+    background: #000;
+    justify-content: center;
+    grid-column: line2/line-end;
+
+}

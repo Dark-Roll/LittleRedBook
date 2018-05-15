@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="Unicode">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小紅書</title>
+    <link rel="stylesheet" href="./css/head.css">
+</head>
+
+<body>
+    <div class="headtop">
+        <div class="innerHead">
+            <img src="redBookLogo.png" alt="" class="headimg">
+            <div class="menu-nav">
+                <a>Home</a>
+                <a>Find</a>
+                <a>媒體報導</a>
+                <!-- <li>????</li>
+                <li>??</li> -->
+            </div>
+        </div>
+    </div>
+
+    
+    <div id='divTyping' style="    top: 200px;
+    position: absolute;">aa</div>
+    <!-- why css can't run  -->
+    <script>
+        let strArr=['js 實現的 打字效果，感覺蠻有趣的。','裝逼逼逼逼逼','萌萌da'];
+        // var str = 'js 實現的 打字效果，感覺蠻有趣的。';
+        var i = 0;
+        // function typing() {
+            // console.log("typing");
+        var divTyping = document.getElementById('divTyping');
+            
+            strArr.map((ele,index)=>{
+                console.log(ele.length)
+                
+                function typing(){
+                    console.log("typing",index);
+                    if (i <= ele.length) {   // 利用小於和回乎做 for loop
+                        divTyping.innerHTML = ele.slice(0, i++) + '|';
+                        console.log(""+ele.slice(0, i))
+                        console.log('loop + i',i);
+                        setTimeout('typing()',4000);//遞歸調用  好像沒作用
+                    }
+                    
+                    else {
+                        console.log("end");
+                        // divTyping.innerHTML = "";//結束打字,移除 _ 光標
+                        divTyping.innerHTML = str;//結束打字,移除 _ 光標
+                        i=0;
+                        // typing()
+                        // set end function ?
+                    }
+                }
+                typing()
+            })
+        // }
+        // typing();
+    </script>
+
+</body>
+
+</html>

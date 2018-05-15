@@ -3,9 +3,19 @@ import React, { Component } from "react";
 
 class App extends Component {
 	render(){
+		// var intElemScrollHeight = document.getElementsByClassName('.headtop').scrollHeight;
 		return(
 			<div>
-				<div class="headtop">
+				<div class="load"
+				 style={{
+				 	//  width:`${intElemScrollHeight}`+"50px", 
+					 height:"50px",
+					 "background-color" :'red',
+					 position:"fixed"
+				 	}}> 
+					a </div>
+				
+				<div class="headtop" style={{height:"2000px"}}>
 					<div class="innerHead">
 						<img src="redBookLogo.png" alt="" class="headimg"/>
 						<div class="menu-nav">
@@ -18,6 +28,7 @@ class App extends Component {
 						</div>
 					</div>
 				</div>
+				
 				<div class="title-item">
 					<div class="left">
 						<span>小紅書是</span><br/> 

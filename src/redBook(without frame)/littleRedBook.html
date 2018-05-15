@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="Unicode">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小紅書</title>
+    <link rel="stylesheet" href="./css/head.css">
+</head>
+
+<body>
+    <div class="headtop">
+        <div class="innerHead">
+            <img src="redBookLogo.png" alt="" class="headimg">
+            <div class="menu-nav">
+                <a href="./littleRedBook.html">Home</a>
+                <a href="./explore/index.html">社區精選</a> 
+                <!-- cannot remove the index.html ,why? -->
+                <a href="./report.html">媒體報導</a>
+                <a href="./joinUs.html">加入我們</a>
+                <a href="./cooporate.html">合作</a>
+                <!-- <li>????</li>
+                <li>??</li> -->
+            </div>
+        </div>
+    </div>
+
+    
+    <div id='divTyping' style="    top: 200px;
+    position: absolute;">aa</div>
+    <!-- why css can't run  -->
+    <script>
+        let strArr=['js 實現的 打字效果，感覺蠻有趣的。','裝逼逼逼逼逼','萌萌da'];
+        // var str = 'js 實現的 打字效果，感覺蠻有趣的。';
+        // var i = 0;。
+        // function typing() {
+            // console.log("typing");
+        var divTyping = document.getElementById('divTyping');
+            
+            strArr.map((ele,index)=>{
+                console.log(ele.length)
+                let i=0;
+                function typing(){
+                    console.log("typing",index ,"i",i);
+                    if (i <= ele.length) {   // 利用小於和回乎做 for loop
+                        divTyping.innerHTML = ele.slice(0, i++) + '|';
+                        console.log(""+ele.slice(0, i))
+                        console.log('loop + i',i);
+                        // setTimeout('typing()',4000);//遞歸調用  好像沒作用
+                        typing()
+                    }
+                    
+                    else {
+                        console.log("end");
+                        // divTyping.innerHTML = "";//結束打字,移除 _ 光標
+                        divTyping.innerHTML = ele;//結束打字,移除 _ 光標
+                        i=0;
+                        // typing()
+                        // set end function ?
+                    }
+                }
+                typing()
+            })
+        // }
+        typing();
+    </script>
+    <div class="section" style="width:100%">
+        
+    </div>
+    <section>
+        <div class="section">
+            section
+        </div>
+        <article>
+            article
+        </article>    
+        <div class="aside">
+            aside
+        </div>
+    </section>
+    <div class="footer" style="position:absolute; bottom:0; width:100%; background-color:aquamarine">
+        <div class="list" style="float:left; width:500px; height:50px; margin:10px; text-align:center; ">
+            <div class="foot" style="display:inline-block; margin:30px;">this</div>
+            <div class="foot" style="display:inline-block; margin:30px;">is</div>
+            <div class="foot" style="display:inline-block; margin:30px;"> the </div>
+            <div class="foot" style="display:inline-block; margin:30px;">foot </div>
+            <div class="foot" style="display:inline-block; margin:30px;">oh.</div>
+        </div>
+    </div>
+</body>
+
+</html>

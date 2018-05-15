@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+}
+.headtop{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    position: fixed;
+    top:0;
+    
+}
+
+.headimg{
+    width:31%;
+}
+
+.menu-nav{
+    height: 50px;
+    overflow: hidden;
+    position: absolute;
+    /* top: 0; */
+    right: 0;
+}
+
+a{
+    padding:10px;
+}
+
+/* li{
+    float: left;
+} */
+
+.divTyping{
+    top: 200px;
+    position: absolute;
+}
