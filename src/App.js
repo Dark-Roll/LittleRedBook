@@ -10,7 +10,7 @@ class App extends Component {
 				 style={{
 				 	//  width:`${intElemScrollHeight}`+"50px", 
 					 height:"50px",
-					 "background-color" :'red',
+					 "backgroundColor" : "red",
 					 position:"fixed"
 				 	}}> 
 					a </div>
